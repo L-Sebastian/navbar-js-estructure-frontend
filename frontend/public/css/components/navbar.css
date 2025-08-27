@@ -1,19 +1,21 @@
-.header{
+.header {
     /*display: grid;
     grid-template-columns: repeat(1fr, 1);*/
-    position: fixed;
+    position: static;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 100%;
+
+
 }
 
-.navbar__litle{
+.navbar__title{
     margin: 0;
     padding: 12px;
     font-size: var(--fs-md);
-    text-align: center;
+   text-align: center;
 }
-    
+
 .navbar__subtitle{
     font-size: var(--fs-xs);
     color: var(--gray-700);
@@ -25,29 +27,59 @@
     margin: 0 auto;
     width: 100%;
     background-color: var(--primary-900);
+    padding: 0;
 }
+
+/*Mobile firts*/
+
+
 .navbar__list{
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
     list-style: none;
-    padding: 8px;
-    margin: 0;
     display: flex;
-    gap: 40px;
-    flex-grow: 1;
-    justify-content: space-evenly;
-    text-decoration: none;
+    padding: 0;
 }
 
-.navbar__items{
-    text-decoration: none;
-
+.navbar-item{
+    width: 100%;
+    text-align: center;
 }
-
 .navbar__link {
+    display: block;
+    text-align: center;
+    padding: 0.8rem;
     text-decoration: none;
     color: var(--white);
-    transition: color 0.7s ease;
+    font-size: var(--fs-xs);
+    transition: color 0.3s ease;
+}
+
+.navbar__link.active {
+    background-color: var(--white);
+    color: var(--primary-950);
+    /*border-radius: 30px;/*
+
+    /* Forma de trapecio diagonal */
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
 }
 
 .navbar__link:hover{
     color: var(--secundary-950);
+}
+
+p{
+    font-size: var(--fs-md);
+}
+
+@media (width > 768px) {
+    .navbar__list{
+        /*padding: 4px;*/
+        margin: 0;
+        flex-direction: row;
+        gap: 40px;
+        flex-grow: 1;
+        justify-content: space-evenly;
+    }  
 }
