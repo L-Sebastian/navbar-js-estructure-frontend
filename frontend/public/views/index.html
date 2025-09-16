@@ -9,32 +9,38 @@
     <script src="/frontend/public/js/components/navbar.js" defer></script>
     <script src="/frontend/public/js/components/hero.js" defer></script>
     <!-- <script src="/frontend/public/js/components/card.js" defer></script> -->
-    <script src="/frontend/public/js/components/card.js" defer></script>
+    <script src="/frontend/public/js/components/form.load.js" defer></script>
 
+    <!-- Script para cargar todas las cards -->
     <script type="module">
-        import {loadCards} from "/frontend/public/js/components/card.js";
-        loadCards(".card");//Clase para cargar todas las cards
+        import {loadCards} from "/frontend/public/js/components/card.js"
+        loadCards(".services__cards-container");//Clase para cargar todas las card
     </script>
 
 </head>
 <body>
     <header class="header">
-        <div class="navbar-container"> </div>
+        <div class="navbar-container"></div>
     </header>
 
-    <!-- Section hero -->
-     <section class="hero">
+    <!-- Hero section-->
+    <section class="hero">
         <div class="hero-container"></div>
-     </section>
-     <div class="cards-container">
-        
-     </div>
+    </section><!-- Hero section-->
+
+    <!--cards section-->
+    <main class="services">
+        <div class="services__cards-container"></div>
+    <!--cards section-->
+
+        <!--Form section-->
+        <form action="" class="services__form-container"></form>
+    </main><!--Form section-->
+
+
 
     <h1>Estoy en inicio</h1>
 
-    <section class="cards-container">
-
-    </section>
-
+    
 </body>
 </html>

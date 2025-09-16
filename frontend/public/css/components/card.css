@@ -1,0 +1,87 @@
+.services {
+    display: flex;
+    flex-direction: column;
+}
+.services__cards-container{
+    display: grid;
+    gap: 24px;
+    justify-content: center;
+    border: 1px solid var(--tertiary-500);
+    padding: 24px;
+}
+
+@media (width > 640px) {
+    .services__cards-container{
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 90%;
+        margin: 100px auto 0;
+
+    }
+}
+
+@media (width > 1024px) {
+    .services__cards-container{
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 90%;
+
+    }
+}
+
+.card {
+    border: 1px solid var(--tertiary-500);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    /*Esta medida de 320px es porque el celular comercial mas pequeño que se vende en la actualidad tiene esta medida*/
+    /* min-width: 320px; */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (width > 1024px) {
+    .card {
+        max-width: 280px;
+
+    }
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 1);
+}
+
+
+.card__title {
+    font-size: var(--fs-md);
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.card__icons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 24px 0px;
+}
+
+.card__icon {
+    width: 48px;
+    height: 48px;
+}
+
+.card__description {
+    font-size: var(--fs-xs);
+    line-height: 1.5;
+}
+
+/* Breakpoints */
+
+/*
+Alias       Max-width       Uso tipico
+
+sm          640px           Telefonos grandes
+md          768px           Tablets
+lg          1024px          Laptops
+xl          1280px          Desktop
+2xl         1536px          Big Screen
+/*
